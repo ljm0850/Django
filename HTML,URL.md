@@ -25,6 +25,9 @@
 
 - **action**: 데이터를 받을 URL 지정
 - **method**: 데이터 전달 방식 지정
+  - get
+  - post
+
 
 #### input
 
@@ -34,7 +37,8 @@
 
 - 데이터를 입력 받기 위해 사용
   - 양식 제출시 name = "value" value를 넘김 
-- 주로 GET / POST 방식으로 받음
+  
+  
 
 #### label
 

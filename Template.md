@@ -49,7 +49,12 @@
 - 출력 텍스트를 만들때 사용
 - 반복, 논리를 수행 가능
 
-
+- {{ forloop.counter }}
+  - 반복문 실행시 반복된 숫자만큼(1,2,3,4,...)가 출력
+  - forloop.counter0
+    - 0,1,2,3...
+  - forlloop.recounter
+    - 끝지점을 기준으로 현재가 몇번인지
 
 ### Comments
 
