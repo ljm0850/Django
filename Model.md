@@ -493,3 +493,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
   - value값을 주어 그 전 값을 보여줌
   - textarea의 경우 value 속성이 없어 태그 내부 값으로 작성
+
+- <a> tag의 경우 "GET" 방식으로만 요청이 가능 => "POST"사용하려면 <form>tag 사용
