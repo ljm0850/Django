@@ -202,7 +202,8 @@ def create(request):
 - 받은 데이터로 DB 객체를 만들고 저장
 - ModelForm의 class는 기존 모델의 instance를 받을 수 있음
   - 이를 이용하여 조건문을 통해 기존의 new와 create 통합가능
-
+  - edit과 update 통합 가능
+  
 - 유효성이 확인되지 않은 경우 save() 호출시 form.errors를 통해 에러 확인 가능
 
 ```django
@@ -212,6 +213,9 @@ def create(request):
 ```
 
 - form 태그의 action 값이 없어도 동작 가능은 하지만, AS를 위해 넣어주자
+  - action 값이 없을 경우 현재 url을 다시 불러옴
+  - method가 POST방식으로 보내짐 => views if문에서 달라짐 
+
 
 
 
@@ -293,6 +297,8 @@ def create(request):
     <button class="btn">작성</button>
 </form>
 ```
+
+- {{ form }}을 위와 같이 분리 가능
 
 ### Looping over the form's fields
 
