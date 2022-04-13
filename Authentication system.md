@@ -289,7 +289,8 @@ def update(request):
     return render(request, 'accounts/update.html', context)
 ```
 
-
+- get_user_model()
+  - 현재 프로젝트에서 활성화 된 사용자 모델을 반환
 
 ## 비밀번호 변경
 
