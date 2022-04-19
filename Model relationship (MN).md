@@ -102,7 +102,7 @@ class Person(models.Model):
     name = models.CharField(max_length=20)
 ```
 
-
+- 중개 테이블의 컬럼 이름이 from_person_id // to_person_id 형태로 생성됨
 
 ###  RelatedManager
 
