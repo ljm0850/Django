@@ -336,7 +336,9 @@ def comment_create(request, article_pk):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 ```
 
-#### 추가적인 사항
+#### 추가적인 사항(Nested relationships)
+
+- ArticlesSerializer 사용시 Article에 달린 comment를 알고 싶을때(pk번호가 아닌 content로)
 
 ```python
 
@@ -345,8 +347,11 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = '__all__'
         read_only_fields = ('article',)
+        depth = 1		#글 내용을 펼처서 볼 수 있음
         
 class ArticleSerializer(serializers.ModelSerializer):
+    # pk번호로 표현 하고 싶다면
+    # comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     comment_set = CommentSerializer(many=True, read_only=True)
     comment_count = serializers.IntegerField(source='comment_set.count', read_only=True)
 
